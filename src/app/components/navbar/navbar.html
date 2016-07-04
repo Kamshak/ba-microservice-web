@@ -1,0 +1,19 @@
+<nav class="navbar navbar-static-top navbar-default" ng-controller="NavbarCtrl">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="fa fa-rocket"></span> MicroserviceDemo
+      </a>
+      <div class="navbar-brand has-spinner" ng-show="loadingIndicator.isLoading()">
+  			<i class="spinner fa fa-spinner fa-1x fa-spin"></i>
+  		</div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+      <ul class="nav navbar-nav">
+        <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+        <li ui-sref-active="active" ng-show="UsersService.isLoggedIn()"><a ui-sref="products">Products</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
