@@ -7,9 +7,10 @@ cache:
 directories:
   - /var/lib/docker
 
+before_install:
+  - npm install -g gulp bower node-gyp
 
 install:
-  - npm install -g gulp bower node-gyp
   - npm install && bower install
 
 script:
