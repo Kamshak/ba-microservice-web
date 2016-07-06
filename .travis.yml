@@ -3,6 +3,10 @@ language: node_js
 services:
   - docker
 
+env:
+  - USERS_SERVICE_URL=users
+  - PRODUCTS_SERVICE_URL=products
+
 cache:
 directories:
   - /var/lib/docker

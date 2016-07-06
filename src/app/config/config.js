@@ -3,7 +3,7 @@
 angular.module('ms-web')
 
 .value('ServiceConfig', {
-  // These are injected via Gulp from env variables
-  usersServiceUrl: '{{$USERS_SERVICE_URL}}',
-  productsServiceUrl: '{{$PRODUCTS_SERVICE_URL}}'
+  // These are injected via Gulp from the service configuration file specified in gulpfile.js (default:services.json)
+  usersServiceUrl: '{{usersServiceUrl}}',
+  productsServiceUrl: '{{productsServiceUrl}}'
 });

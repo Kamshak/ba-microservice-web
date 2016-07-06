@@ -1,0 +1,4 @@
+{
+  "usersServiceUrl": "http://192.168.10.11:8000/",
+  "productsServiceUrl": "http://192.168.10.13:8000/"
+}

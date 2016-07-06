@@ -54,6 +54,7 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
+    "gulp-angular-templatecache": "^2.0.0",
     "gulp-if": "^2.0.1"
   }
 }

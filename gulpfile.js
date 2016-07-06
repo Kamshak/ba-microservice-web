@@ -9,6 +9,7 @@ var options = {
   dist: 'dist',
   tmp: '.tmp',
   e2e: 'e2e',
+  serviceConfigurationFile: process.env['SERVICES_CONFIGURATION_FILE'] || 'services.json',
   errorHandler: function(title) {
     return function(err) {
       gutil.log(gutil.colors.red('[' + title + ']'), err.toString());
