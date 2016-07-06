@@ -8,14 +8,14 @@ directories:
   - /var/lib/docker
 
 
-before_install:
+install:
   - npm install -g gulp bower node-gyp
   - npm install && bower install
+
+script:
   - npm test
   - gulp build
   - docker build -t web-service .
-
-install: true
 
 after_success:
   - eval "$(~/.local/bin/aws ecr get-login)"
