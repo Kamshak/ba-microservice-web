@@ -5,11 +5,9 @@
 
 'use strict';
 
-var MainPage = function() { 
-  this.jumbEl = element(by.css('.jumbotron'));
-  this.h1El = this.jumbEl.element(by.css('h1'));
-  this.imgEl = this.jumbEl.element(by.css('img'));
-  this.thumbnailEls = element(by.css('body')).all(by.repeater('awesomeThing in awesomeThings'));
+var MainPage = function() {
+  this.h2El = element(by.css('h2'));
+  this.signUp = element(by.linkText("Sign Up"));
 };
 
 module.exports = new MainPage();

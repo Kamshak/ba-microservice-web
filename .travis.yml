@@ -1,0 +1,25 @@
+language: node_js
+
+services:
+  - docker
+
+cache:
+directories:
+  - /var/lib/docker
+
+
+before_install:
+  - npm install -g gulp bower node-gyp
+  - npm install && bower install
+  - npm test
+  - gulp build
+  - docker build -t web-service .
+
+install: true
+
+after_success:
+  - eval "$(~/.local/bin/aws ecr get-login)"
+  - docker tag web-service:latest 277555456074.dkr.ecr.eu-west-1.amazonaws.com/web-service:build-$TRAVIS_BUILD_NUMBER
+  - docker tag web-service:latest 277555456074.dkr.ecr.eu-west-1.amazonaws.com/web-service:integration-tested
+  - docker push 277555456074.dkr.ecr.eu-west-1.amazonaws.com/web-service:build-$TRAVIS_BUILD_NUMBER
+  - docker push 277555456074.dkr.ecr.eu-west-1.amazonaws.com/web-service:integration-tested

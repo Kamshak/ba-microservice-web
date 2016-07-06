@@ -9,14 +9,14 @@ describe('controllers', function(){
     scope = $rootScope.$new();
   }));
 
-  it('should define more than 5 awesome things', inject(function($controller) {
-    expect(scope.awesomeThings).toBeUndefined();
+  it('should define a login function', inject(function($controller) {
+    expect(scope.login).toBeUndefined();
 
     $controller('MainCtrl', {
-      $scope: scope
+      $scope: scope,
+      userName: "Test Username",
     });
 
-    expect(angular.isArray(scope.awesomeThings)).toBeTruthy();
-    expect(scope.awesomeThings.length > 5).toBeTruthy();
+    expect(angular.isFunction(scope.login)).toBeTruthy();
   }));
 });

@@ -2,7 +2,7 @@
 
 angular.module('ms-web')
 .factory('ProductsService', function($http, ServiceConfig, UsersService) {
-  let ProductsService = {};
+  var ProductsService = {};
 
   ProductsService.list = function() {
     return $http({

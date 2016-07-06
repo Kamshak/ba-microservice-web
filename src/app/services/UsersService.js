@@ -2,7 +2,7 @@
 
 angular.module('ms-web')
 .factory('UsersService', function($http, ServiceConfig, $q) {
-  let UsersService = {};
+  var UsersService = {};
 
   UsersService.login = function(email, password) {
     return $http({

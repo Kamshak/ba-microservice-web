@@ -36,7 +36,7 @@ module.exports = function(options) {
     gulp.src(srcFiles)
       .pipe(concat(function(files) {
         callback(bowerDeps.js
-          .concat(_.pluck(files, 'path'))
+          .concat(_.map(files, 'path'))
           .concat(htmlFiles)
           .concat(specFiles));
       }));
