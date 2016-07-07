@@ -1,4 +1,4 @@
-FROM dockerfile/nodejs
+FROM nodejs
 RUN npm install -g gulp
 
 ADD . /opt/app
