@@ -5,7 +5,6 @@ angular.module('ms-web')
 .controller('ProductsCtrl', function($scope, $loading, ProductsService, UsersService) {
   var loadList = function( ) {
     ProductsService.list().then(function(products) {
-      console.log(products);
       $scope.products = products;
     }).catch(function(error) {
       $scope.error = error;

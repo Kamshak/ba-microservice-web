@@ -2,40 +2,40 @@
     <div class="row content">
         <h2>Product List</h2>
         <div class="alert alert-danger" ng-if="error" role="alert">The Products could not be fetched.</div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            Add a product
-          </div>
-          <div class="panel-body" dw-loading="product">
-            <form class="form-inline">
-              <div class="form-group">
-                <label for="exampleInputName2">Name</label>
-                <input type="text" class="form-control" ng-model="product.name">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail2">Price</label>
-                <input type="number" class="form-control" ng-model="product.price">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail2">Color</label>
-                <input type="text" class="form-control" ng-model="product.color">
-              </div>
-              <button type="submit" class="btn btn-default" ng-click="addProduct(product)">Add</button>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-12">
 
-        </div>
-        <div class="col-md-12">
-          <table class="table">
-            <tr><th>Name</th><th>Price</th><th>Color</th></tr>
-            <tr ng-repeat="product in products">
-              <td>{{ product.name }}</td>
-              <td>{{ product.price }}</td>
-              <td>{{ product.color }}</td>
-            </tr>
-          </table>
+        <div class="col-md-12" ng-hide="error">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              Add a product
+            </div>
+            <div class="panel-body" dw-loading="product">
+              <form class="form-inline">
+                <div class="form-group">
+                  <label for="exampleInputName2">Name</label>
+                  <input type="text" class="form-control" ng-model="product.name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail2">Price</label>
+                  <input type="number" class="form-control" ng-model="product.price">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail2">Color</label>
+                  <input type="text" class="form-control" ng-model="product.color">
+                </div>
+                <button type="submit" class="btn btn-default" ng-click="addProduct(product)">Add</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <table class="table">
+              <tr><th>Name</th><th>Price</th><th>Color</th></tr>
+              <tr ng-repeat="product in products">
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.color }}</td>
+              </tr>
+            </table>
+          </div>
         </div>
     </div>
 </div>

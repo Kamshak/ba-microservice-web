@@ -11,7 +11,11 @@ angular.module('ms-web')
     .then(function() {
       $state.go('products');
     }, function(err) {
-      $scope.error = err;
+      if (err.data && err.data.description) {
+        $scope.error = err.data.description;
+      } else {
+        $scope.error = err;
+      }
     }).then(function() {
       $loading.finish('login');
     });

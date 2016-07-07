@@ -1,5 +1,5 @@
 {
-  "name": "scriptfodder-stats",
+  "name": "ba-microservice-web",
   "version": "1.0.0",
   "scripts": {
     "test": "gulp test"
@@ -48,13 +48,11 @@
     "require-dir": "^0.3.0",
     "uglify-save-license": "^0.4.1",
     "wiredep": "^4.0.0",
-    "wrench": "^1.5.9"
+    "wrench": "^1.5.9",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-if": "^2.0.1"
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "dependencies": {
-    "gulp-angular-templatecache": "^2.0.0",
-    "gulp-if": "^2.0.1"
   }
 }
