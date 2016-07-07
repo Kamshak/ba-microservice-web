@@ -11,6 +11,8 @@ directories:
 
 before_install:
   - npm install -g gulp bower node-gyp
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
 
 install:
   - npm install && bower install
