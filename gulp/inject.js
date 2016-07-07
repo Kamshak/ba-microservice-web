@@ -5,7 +5,7 @@ var $ = require('gulp-load-plugins')();
 var wiredep = require('wiredep').stream;
 var fs = require("fs");
 var through = require('through2');
-const gutil = require('gulp-util');
+var gutil = require('gulp-util');
 
 /*
   Looks for {{ var }} in the stream and replaces is with variables from the JSON file

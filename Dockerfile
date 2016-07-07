@@ -1,5 +1,5 @@
 FROM dockerfile/nodejs
-RUN npm install -g bower gulp
+RUN npm install -g gulp
 
 ADD . /opt/app
 WORKDIR /opt/app
